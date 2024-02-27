@@ -1,7 +1,7 @@
-output "subnets" {
-  value = "aws_subnets.main"
+output "subnet_ids" {
+  value = aws_subnet.main
 }
 
-output "vpc" {
-  value = "aws_vpc_id"
+output "aws_route_table" {
+  value = aws_route_table.main
 }
