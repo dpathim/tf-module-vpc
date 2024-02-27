@@ -1,1 +1,1 @@
-variable = "cidr" {}
+variable  "cidr" {}
