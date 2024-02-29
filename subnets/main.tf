@@ -3,7 +3,9 @@ resource "aws_subnet" "main" {
   vpc_id     = var.vpc_id
   cidr_block = each.value["cidr"]
   availability_zone = each.value["az"]
-#  tags = merge(var.tags, { Name = "${var.env}-${each.key}-subnet"})
+  tags = {
+    name = each.key
+  } #merge(var.tags, { Name = "${var.env}-${each.key}-subnet"})
 #
 }
 #
