@@ -4,14 +4,14 @@ resource "aws_vpc" "main" {
 }
 
 
-#module "subnets" {
-#  source = "./subnets"
-#  for_each = var.subnets
-#  subnets = each.value
-#  vpc_id = aws_vpc.main.id
+module "subnets" {
+  source = "./subnets"
+  for_each = var.subnets
+  subnets = each.value
+  vpc_id = aws_vpc.main.id
 #  tags = local.tags
 #  env = var.env
-#}
+}
 #
 #resource "aws_internet_gateway" "igw" {
 #  vpc_id = aws_vpc.main.id
