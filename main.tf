@@ -16,6 +16,9 @@ module "subnets" {
 resource "aws_internet_gateway" "igw" {
   vpc_id = aws_vpc.main.id
 #  tags = merge(local.tags, { Name = "${var.env}-igw"})
+  tags = {
+    Name = "main"
+  }
 }
 #
 #resource "aws_route" "igw" {
